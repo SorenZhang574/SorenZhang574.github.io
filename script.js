@@ -1,10 +1,26 @@
-const toggle = document.querySelector(".theme-toggle");
+const themeToggle = document.querySelector(".theme-toggle");
+const root = document.documentElement;
 
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
+try {
+  if (localStorage.getItem("theme") === "dark") {
+    root.dataset.theme = "dark";
+    themeToggle.setAttribute("aria-pressed", "true");
+  }
+} catch {
+  // Theme changes still work when the browser blocks storage.
 }
 
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+themeToggle.addEventListener("click", () => {
+  const dark = root.dataset.theme !== "dark";
+  const theme = dark ? "dark" : "light";
+  root.dataset.theme = theme;
+  themeToggle.setAttribute("aria-pressed", String(dark));
+
+  try {
+    localStorage.setItem("theme", theme);
+  } catch {
+    // Keep the current theme for this page view.
+  }
 });
+
+themeToggle.hidden = false;

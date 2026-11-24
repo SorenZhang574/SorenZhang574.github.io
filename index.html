@@ -3,123 +3,104 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Soren Zhang's academic homepage. Undergraduate student interested in computer vision, 3D vision, and deep learning.">
+    <meta name="description" content="Soren (Sisheng) Zhang's academic homepage, with research on 3D vision, rendering, and Gaussian Splatting.">
     <title>Soren Zhang | Academic Homepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
-  <body>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Back to the top">Soren Zhang</a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#interests">Interests</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
-        <span class="theme-icon" aria-hidden="true">◐</span>
-      </button>
+      <div class="site-bar container">
+        <a class="brand" href="#top"><span class="grass-block" aria-hidden="true"></span>Soren Zhang</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#interests">Interests</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" hidden>
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
     </header>
 
-    <main id="top">
-      <section class="hero section" id="about">
-        <div class="hero-main">
-          <p class="eyebrow">UNDERGRADUATE STUDENT</p>
-          <h1>Soren Zhang</h1>
-          <p class="lead">I am an undergraduate student at Harbin Institute of Technology, Shenzhen, interested in computer vision, 3D vision, rendering, and deep learning.</p>
-          <p>I am still at an early stage of my academic journey. This page is intended as a simple academic homepage where I can gradually collect my education, interests, notes, and future research updates.</p>
+    <main id="main" class="container" tabindex="-1">
+      <section class="hero" id="about" aria-labelledby="name">
+        <div class="hero-copy">
+          <h1 id="name">Soren Zhang</h1>
+          <p class="academic-name">Sisheng Zhang</p>
+          <p>I am an undergraduate at Harbin Institute of Technology, Shenzhen. My research interests include 3D vision, rendering, computer vision, and deep learning.</p>
+          <div class="link-row">
+            <a class="pixel-link primary-link" href="#publications">Publications</a>
+            <a class="pixel-link" href="https://github.com/SorenZhang574">GitHub</a>
+          </div>
         </div>
-        <aside class="profile-card" aria-label="Profile summary">
-          <div>
-            <span class="meta-label">EMAIL</span>
-            <a href="mailto:sorencs2023@163.com">sorencs2023@163.com</a>
-          </div>
-          <div>
-            <span class="meta-label">AFFILIATION</span>
-            <p>Harbin Institute of Technology, Shenzhen</p>
-          </div>
-          <div>
-            <span class="meta-label">STATUS</span>
-            <p>Undergraduate student</p>
-          </div>
-        </aside>
-      </section>
 
-      <section class="section split-section" id="education">
-        <div class="section-title">
-          <p class="eyebrow">01 / EDUCATION</p>
-          <h2>Education</h2>
-        </div>
-        <div class="section-content">
-          <div class="timeline-item">
-            <span class="date">2023 - Present</span>
-            <h3>Harbin Institute of Technology, Shenzhen</h3>
-            <p>Undergraduate student. Currently building foundations in computer science, mathematics, and artificial intelligence.</p>
-          </div>
+        <div class="pixel-landscape" aria-hidden="true">
+          <span class="sun"></span>
+          <span class="cloud cloud-left"></span>
+          <span class="cloud cloud-right"></span>
+          <span class="ridge ridge-back"></span>
+          <span class="ridge ridge-front"></span>
+          <span class="tree tree-left"></span>
+          <span class="tree tree-right"></span>
+          <span class="ground"></span>
         </div>
       </section>
 
-      <section class="section split-section muted-section" id="interests">
-        <div class="section-title">
-          <p class="eyebrow">02 / RESEARCH INTERESTS</p>
-          <h2>Research Interests</h2>
-        </div>
-        <div class="section-content">
-          <ul class="interest-list">
-            <li><strong>3D Vision:</strong> scene representation, reconstruction, geometry, and novel view synthesis.</li>
-            <li><strong>Computer Vision:</strong> visual perception, depth understanding, and image-based learning.</li>
-            <li><strong>Deep Learning:</strong> model design, optimization, and learning systems for visual data.</li>
-            <li><strong>Rendering:</strong> efficient visual representation and the connection between graphics and learning.</li>
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <article class="paper panel">
+          <a class="paper-figure" href="https://sorenzhang574.github.io/Laplacian-GS/" aria-label="Laplacian-GS project page">
+            <img src="assets/laplacian-gs-teaser.webp" width="1600" height="529" alt="Laplacian-GS overview showing frequency-staged training and 3D scene reconstructions">
+          </a>
+          <div class="paper-copy">
+            <p class="venue">Pacific Graphics 2026</p>
+            <h3>Laplacian Frequency Hierarchies for Efficient 3D Gaussian Splatting Training</h3>
+            <p class="authors">Yixiong Yang<sup>*</sup>, <strong>Sisheng Zhang</strong><sup>*</sup>, Qingsong Yan, Shaohuai Shi, Qiang Wang</p>
+            <p class="contribution">* Equal contribution</p>
+            <p class="paper-summary">Laplacian-GS speeds up training by splitting images into frequency bands and fitting a separate Gaussian field at each stage.</p>
+            <ul class="paper-links" aria-label="Publication links">
+              <li><a href="https://doi.org/10.2312/pg.20261064">DOI</a></li>
+              <li><a href="https://arxiv.org/abs/2609.03334">arXiv</a></li>
+              <li><a href="https://sorenzhang574.github.io/Laplacian-GS/">Project</a></li>
+              <li><a href="https://github.com/SorenZhang574/Laplacian-GS">Code</a></li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <div class="profile-grid">
+        <section class="section" id="interests" aria-labelledby="interests-title">
+          <h2 id="interests-title">Research Interests</h2>
+          <ul class="interests">
+            <li>3D vision and novel view synthesis</li>
+            <li>Efficient rendering and scene representation</li>
+            <li>Computer vision and deep learning</li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section class="section split-section" id="publications">
-        <div class="section-title">
-          <p class="eyebrow">03 / PUBLICATIONS</p>
-          <h2>Publications</h2>
-        </div>
-        <div class="section-content">
-          <div class="empty-state">
-            <h3>No publications yet.</h3>
-            <p>I am currently focusing on learning, coursework, and building research foundations. This section will be updated when there are papers, preprints, or technical reports to share.</p>
-          </div>
-        </div>
-      </section>
+        <section class="section" id="education" aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+          <p class="school"><strong>Harbin Institute of Technology, Shenzhen</strong></p>
+          <p class="education-date">Undergraduate student · 2023–present</p>
+        </section>
+      </div>
 
-      <section class="section split-section muted-section">
-        <div class="section-title">
-          <p class="eyebrow">04 / NOTES</p>
-          <h2>Academic Notes</h2>
-        </div>
-        <div class="section-content">
-          <div class="empty-state">
-            <h3>Coming soon.</h3>
-            <p>I may use this section for reading notes, course summaries, or short reflections on topics I am studying.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div>
-          <p class="eyebrow">05 / CONTACT</p>
-          <h2>Contact</h2>
-        </div>
-        <div class="contact-box">
-          <p>For academic communication or friendly discussion, feel free to reach me by email.</p>
-          <a class="button button-primary" href="mailto:sorencs2023@163.com">sorencs2023@163.com <span aria-hidden="true">↗</span></a>
-        </div>
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <a href="mailto:sorencs2023@163.com">sorencs2023@163.com</a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Soren Zhang</span>
-      <a href="#top">Back to top ↑</a>
+      <div class="container footer-inner">
+        <span>© 2026 Soren Zhang</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

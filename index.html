@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Soren (Sisheng) Zhang's academic homepage, with research on 3D vision, rendering, and Gaussian Splatting.">
     <title>Soren Zhang | Academic Homepage</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="assets/homepage-v2.css">
+    <script src="assets/homepage-v2.js" defer></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -27,15 +27,17 @@
       </div>
     </header>
 
-    <main id="main" class="container" tabindex="-1">
+    <main id="main" tabindex="-1">
       <section class="hero" id="about" aria-labelledby="name">
-        <div class="hero-copy">
-          <h1 id="name">Soren Zhang</h1>
-          <p class="academic-name">Sisheng Zhang</p>
-          <p>I am an undergraduate at Harbin Institute of Technology, Shenzhen. My research interests include 3D vision, rendering, computer vision, and deep learning.</p>
-          <div class="link-row">
-            <a class="pixel-link primary-link" href="#publications">Publications</a>
-            <a class="pixel-link" href="https://github.com/SorenZhang574">GitHub</a>
+        <div class="hero-content container">
+          <div class="hero-copy">
+            <h1 id="name">Soren Zhang</h1>
+            <p class="academic-name">Sisheng Zhang</p>
+            <p>I am an undergraduate at Harbin Institute of Technology, Shenzhen. My research interests include 3D vision, rendering, computer vision, and deep learning.</p>
+            <div class="link-row">
+              <a class="pixel-link primary-link" href="#publications">Publications</a>
+              <a class="pixel-link" href="https://github.com/SorenZhang574">GitHub</a>
+            </div>
           </div>
         </div>
 
@@ -51,49 +53,54 @@
         </div>
       </section>
 
-      <section class="section" id="publications" aria-labelledby="publications-title">
-        <h2 id="publications-title">Publications</h2>
-        <article class="paper panel">
-          <a class="paper-figure" href="https://sorenzhang574.github.io/Laplacian-GS/" aria-label="Laplacian-GS project page">
-            <img src="assets/laplacian-gs-teaser.webp" width="1600" height="529" alt="Laplacian-GS overview showing frequency-staged training and 3D scene reconstructions">
-          </a>
-          <div class="paper-copy">
-            <p class="venue">Pacific Graphics 2026</p>
-            <h3>Laplacian Frequency Hierarchies for Efficient 3D Gaussian Splatting Training</h3>
-            <p class="authors">Yixiong Yang<sup>*</sup>, <strong>Sisheng Zhang</strong><sup>*</sup>, Qingsong Yan, Shaohuai Shi, Qiang Wang</p>
-            <p class="contribution">* Equal contribution</p>
-            <p class="paper-summary">Laplacian-GS speeds up training by splitting images into frequency bands and fitting a separate Gaussian field at each stage.</p>
-            <ul class="paper-links" aria-label="Publication links">
-              <li><a href="https://doi.org/10.2312/pg.20261064">DOI</a></li>
-              <li><a href="https://arxiv.org/abs/2609.03334">arXiv</a></li>
-              <li><a href="https://sorenzhang574.github.io/Laplacian-GS/">Project</a></li>
-              <li><a href="https://github.com/SorenZhang574/Laplacian-GS">Code</a></li>
-            </ul>
-          </div>
-        </article>
-      </section>
-
-      <div class="profile-grid">
-        <section class="section" id="interests" aria-labelledby="interests-title">
-          <h2 id="interests-title">Research Interests</h2>
-          <ul class="interests">
-            <li>3D vision and novel view synthesis</li>
-            <li>Efficient rendering and scene representation</li>
-            <li>Computer vision and deep learning</li>
-          </ul>
+      <div class="resume-content container">
+        <section class="section" id="publications" aria-labelledby="publications-title">
+          <h2 id="publications-title">Publications</h2>
+          <article class="paper panel">
+            <a class="paper-figure" href="https://sorenzhang574.github.io/Laplacian-GS/" aria-label="Laplacian-GS project page">
+              <img src="assets/laplacian-gs-teaser.webp" width="1600" height="529" style="max-width: 100%; height: auto" alt="Laplacian-GS overview showing frequency-staged training and 3D scene reconstructions">
+            </a>
+            <div class="paper-copy">
+              <p class="venue">Pacific Graphics 2026</p>
+              <h3>Laplacian Frequency Hierarchies for Efficient 3D Gaussian Splatting Training</h3>
+              <p class="authors">Yixiong Yang<sup>*</sup>, <strong>Sisheng Zhang</strong><sup>*</sup>, Qingsong Yan, Shaohuai Shi, Qiang Wang</p>
+              <p class="contribution">* Equal contribution</p>
+              <p class="paper-summary">Laplacian-GS speeds up training by splitting images into frequency bands and fitting a separate Gaussian field at each stage.</p>
+              <ul class="paper-links" aria-label="Publication links">
+                <li><a href="https://doi.org/10.2312/pg.20261064">DOI</a></li>
+                <li><a href="https://arxiv.org/abs/2609.03334">arXiv</a></li>
+                <li><a href="https://sorenzhang574.github.io/Laplacian-GS/">Project</a></li>
+                <li><a href="https://github.com/SorenZhang574/Laplacian-GS">Code</a></li>
+              </ul>
+            </div>
+          </article>
         </section>
 
-        <section class="section" id="education" aria-labelledby="education-title">
-          <h2 id="education-title">Education</h2>
-          <p class="school"><strong>Harbin Institute of Technology, Shenzhen</strong></p>
-          <p class="education-date">Undergraduate student · 2023–present</p>
+        <div class="profile-grid">
+          <section class="section" id="interests" aria-labelledby="interests-title">
+            <h2 id="interests-title">Research Interests</h2>
+            <ul class="interests">
+              <li>3D vision and novel view synthesis</li>
+              <li>Efficient rendering and scene representation</li>
+              <li>Computer vision and deep learning</li>
+            </ul>
+          </section>
+
+          <section class="section" id="education" aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+            <div class="education-entry">
+              <p class="education-date"><time datetime="2023">2023</time>–present</p>
+              <p class="school"><strong>Harbin Institute of Technology, Shenzhen</strong></p>
+              <p>Undergraduate student</p>
+            </div>
+          </section>
+        </div>
+
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <a href="mailto:sorencs2023@163.com">sorencs2023@163.com</a>
         </section>
       </div>
-
-      <section class="section contact" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <a href="mailto:sorencs2023@163.com">sorencs2023@163.com</a>
-      </section>
     </main>
 
     <footer class="site-footer">
